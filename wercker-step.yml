@@ -1,5 +1,5 @@
 name: deploy-go-appengine
-version: 0.0.1
+version: 0.0.2
 description: deploy google appengine
 properties:
   project:

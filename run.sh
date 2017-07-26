@@ -11,4 +11,4 @@ ln -sfn $(pwd) /src/$WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITO
 $GOROOT/bin/goapp get -d $WERCKER_GIT_DOMAIN/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY/$WERCKER_DEPLOY_GO_APPENGINE_APP_PATH
 
 gcloud auth activate-service-account --key-file $WERCKER_DEPLOY_GO_APPENGINE_KEY_FILE --project $WERCKER_DEPLOY_GO_APPENGINE_PROJECT
-$APPENGINE_SDK/appcfg.py update app --oauth2_access_token $(gcloud auth print-access-token 2> /dev/null)
+gcloud app deploy $WERCKER_DEPLOY_GO_APPENGINE_APP_PATH
