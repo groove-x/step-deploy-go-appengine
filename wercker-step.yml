@@ -1,5 +1,5 @@
 name: deploy-go-appengine
-version: 0.0.2
+version: 0.0.3
 description: deploy google appengine
 properties:
   project:
@@ -12,6 +12,10 @@ properties:
     type: string
     required: false
     default: app
+  yaml:
+    type: string
+    required: false
+    default: app.yaml
   appengine_sdk:
     type: string
     required: false
